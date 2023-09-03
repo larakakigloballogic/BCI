@@ -69,7 +69,7 @@ class UserControllerSpec extends EjercicioSpecification {
         def loginBody = getResponse(loginResponse)
         loginBody.name == 'name'
         loginBody.email == 'a@b.com'
-        loginBody.password == 'pass'
+        loginBody.password == 'password'
         org.springframework.util.CollectionUtils.isEmpty(loginBody.phones)
     }
 
