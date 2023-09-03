@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto:  create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      settings.trace: true
+      settings.web-allow-others: false
+
+auth:
+  jwt:
+    issuer: "Arakaki Leonardo"
+    audience: "audience"
+    ttl-in-seconds: 3600
+    secret: "pbm2mebilpQW1IL3UmjajQvstmnQyZ+QjlmNDejga/vYAbjxjWI+fCSOWLlmsX6X"
+
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.springframework.orm.jpa: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.springframework.jdbc.core: TRACE
