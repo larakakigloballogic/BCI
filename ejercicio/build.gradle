@@ -71,5 +71,5 @@ tasks.named('test') {
 		events "passed", "skipped", "failed"
 	}
 }
-targetCompatibility = JavaVersion.VERSION_1_9
+targetCompatibility = JavaVersion.VERSION_1_8
 
